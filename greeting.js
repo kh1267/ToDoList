@@ -5,40 +5,40 @@ const greeting = document.querySelector('.js-greeting');
 const USER_LS = 'currentUser';
 const SHOWING_CN = 'showing';
 
-function loadName(){
+function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
-    
-    if(currentUser == null){
+
+    if (currentUser == null) {
         askForName();
-    } else { 
+    } else {
         paintGreeting(currentUser);
     }
 }
 
-function askForName(){
+function askForName() {
     form.classList.add(SHOWING_CN);
     form.addEventListener('submit', handleSubmit)
 }
 
-function handleSubmit(event){
+function handleSubmit(event) {
     event.preventDefault();
     const currentValue = input.value;
     paintGreeting(currentValue);
     saveName(currentValue);
 }
 
-function paintGreeting(text){
+function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Hello! ${text}`
 }
 
-function saveName(text){
+function saveName(text) {
     localStorage.setItem(USER_LS, text)
 }
 
 
-function init(){
+function init() {
     loadName()
 }
 init()
