@@ -7,7 +7,7 @@ body {
   color: white;
   font-family: 'Sunflower'
 }
-
+.weather {display:block ;text-align: center }
 h1 {font-size: 50px; text-align: center;}
 h4 {font-size: 25px}
 .clicked {
