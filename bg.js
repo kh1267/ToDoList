@@ -18,7 +18,7 @@ function genRandom() {
 function init() {
     const randomNumber = genRandom();
     paintImage(randomNumber);
-    intervalImage();
+
 }
 init()
 
