@@ -4,26 +4,28 @@ const toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
 
-const toDos = [];
+let toDos = [];
 
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
     const parsedToDos = JSON.parse(loadedToDos);
-    parsedToDos.forEach(function(toDo) {
+    parsedToDos.forEach(function (toDo) {
       paintToDo(toDo.text);
     });
   }
 }
 
+
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li);
-  const cleanToDo = toDos.filter(function(toDo) {
-    return toDo.id !== li.id;
+  const cleanToDo = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(li.id);
   });
-  console.log(cleanToDo);
+  toDos = cleanToDo;
+  saveToDos();
 }
 
 function paintToDo(text) {
