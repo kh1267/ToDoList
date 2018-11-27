@@ -20,7 +20,7 @@ body {
   display: block;
 }
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 button {
   border-radius: 50% 50%;
