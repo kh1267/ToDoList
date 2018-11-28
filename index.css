@@ -3,25 +3,48 @@
 }
 
 body {
-  background-color:#2c3e50;
+  background-color: #2c3e50;
   color: white;
-  font-family: 'Sunflower'
+  font-family: "Sunflower";
 }
-.weather {display:block ;text-align: center }
-h1 {font-size: 50px; text-align: center;}
-h4 {font-size: 25px}
+.weather {
+  display: block;
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+h4 {
+  font-size: 25px;
+}
 .clicked {
   color: #7f8c8d;
 }
-.toDoForm {text-align: center}
-.toDoForm> input {background: none; border-top: none; border-right: none; border-bottom: 1px solid white; border-left: none}
+.toDoForm {
+  text-align: center;
+}
+.toDoForm > input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  border-left: none;
+  color: white;
+}
 .form,
 .greetings {
   display: none;
   text-align: center;
-  
 }
-.form input {background: none; border-top: none; border-right: none; border-bottom: 1px solid white; border-left: none}
+.form input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  border-left: none;
+  color: white;
+}
 
 .showing {
   display: block;
@@ -29,22 +52,29 @@ h4 {font-size: 25px}
 }
 ul {
   list-style-type: none;
-  padding:0;
+  padding: 0;
   font-weight: 600;
 }
-ul span{padding-left: 10px}
-li {font-size:18px;margin-bottom: 5px; text-align: center}
+ul span {
+  padding-left: 10px;
+}
+li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 button {
   border-radius: 50% 50%;
-  border: 1px solid white;
+  border: none;
   box-shadow: 1px 1px 5px black;
   cursor: pointer;
-  background-color: #1266FF
+  background-color: #0b144c;
+  color: white;
 }
 
-@keyframes fadeIn{
-  from{
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
   to {
@@ -52,7 +82,7 @@ button {
   }
 }
 
-.bgImage { 
+.bgImage {
   position: absolute;
   top: 0;
   left: 0;
