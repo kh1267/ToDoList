@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>오늘 할 일</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sunflower:300"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./index.css" />
-  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-</head>
+  <body>
+    <!-- CLOCK -->
+    <div class="js-clock">
+      <span class="js-weather weather"></span>
+      <h1>00:00</h1>
+    </div>
 
-<body>
-  <!-- CLOCK -->
-  <div class="js-clock">
-    <span class="js-weather weather"></span>
-    <h1>00:00</h1>
-  </div>
+    <!-- HELLO 'NAME' -->
+    <form class="js-form form">
+      <input type="text" placeholder="What is your name" />
+    </form>
+    <h4 class="js-greeting greeting"></h4>
 
-  <!-- HELLO 'NAME' -->
-  <form class="js-form form">
-    <input type="text" placeholder="What is your name" />
-  </form>
-  <h4 class="js-greeting greeting"></h4>
-
-  <!-- TO DO LIST -->
-  <form class="js-toDoForm toDoForm">
-    <input type="text" placeholder="Write a to do" />
-  </form>
-  <ul class="js-toDoList toDoList"></ul>
-  <!-- JS -->
-  <script src="clock.js"></script>
-  <script src="greeting.js"></script>
-  <script src="todo.js"></script>
-  <script src="bg.js"></script>
-  <script src="weather.js"></script>
-</body>
-
+    <!-- TO DO LIST -->
+    <form class="js-toDoForm toDoForm">
+      <input type="text" placeholder="Write a to do" />
+    </form>
+    <ul class="js-toDoList toDoList"></ul>
+    <!-- JS -->
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+  </body>
 </html>
