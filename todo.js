@@ -10,22 +10,10 @@ function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
     const parsedToDos = JSON.parse(loadedToDos);
-    parsedToDos.forEach(function (toDo) {
+    parsedToDos.forEach(function(toDo) {
       paintToDo(toDo.text);
     });
   }
-}
-
-
-function deleteToDo(event) {
-  const btn = event.target;
-  const li = btn.parentNode;
-  toDoList.removeChild(li);
-  const cleanToDo = toDos.filter(function (toDo) {
-    return toDo.id !== parseInt(li.id);
-  });
-  toDos = cleanToDo;
-  saveToDos();
 }
 
 function paintToDo(text) {
@@ -45,6 +33,17 @@ function paintToDo(text) {
     id: newId
   };
   toDos.push(toDoObj);
+  saveToDos();
+}
+
+function deleteToDo(event) {
+  const btn = event.target;
+  const li = btn.parentNode;
+  toDoList.removeChild(li);
+  const cleanToDo = toDos.filter(function(toDo) {
+    return toDo.id !== parseInt(li.id);
+  });
+  toDos = cleanToDo;
   saveToDos();
 }
 
